@@ -9,6 +9,8 @@ app.use(express.json());
 
 app.engine('mst', mustache(__dirname + '/views/partials','.mst'));
 
-app.set('views', __dirname + '/views', '.mst');
+app.set('view engine', 'mst');
+
+app.set('views', __dirname + '/views')
 
 module.exports = app;
